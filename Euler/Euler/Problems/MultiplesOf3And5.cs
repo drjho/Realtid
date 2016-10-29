@@ -11,17 +11,10 @@ namespace Euler.Problems
         public static int GetResult(int limit)
         {
             int sum = 0;
-            int current = 3;
-            while (current < limit)
+            for (int i = 0; i < limit; i++)
             {
-                sum += current;
-                current += 3;
-            }
-            current = 5;
-            while (current < limit)
-            {
-                sum += current;
-                current += 5;
+                if (i % 3 == 0 || i % 5 == 0)
+                    sum += i;
             }
             return sum;
         }
