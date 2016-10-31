@@ -12,6 +12,8 @@ namespace Euler
         static void Main(string[] args)
         {
             Console.WriteLine(MultiplesOf3And5.GetResult(1000));
+            Console.WriteLine(EvenFibonacciNumbers.GetResult((int)Math.Pow(10, 6) * 4));
+            Console.WriteLine(LargestPrimeFactor.GetResult(600851475143));
         }
     }
 }
