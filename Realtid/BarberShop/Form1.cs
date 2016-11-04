@@ -39,13 +39,14 @@ namespace BarberShop
             {
                 label1.Text += "barber waiting for customer...\n";
                 CustomerWaiting.Wait();
-                label1.Text += "barber is cutting...\n";
+                label1.Text += "barber has customer...\n";
 
                 WaitingRoom.Wait();
                 NumSeats++;
                 WaitingRoom.Release();
 
                 Thread.Sleep(3000);
+                label1.Text += $"barber finished cutting.\n";
                 BarberReady.Release();
             }
         }
@@ -53,16 +54,16 @@ namespace BarberShop
         void Customer(int id)
         {
             label1.Text += $"customer {id} enters.\n";
-            WaitingRoom.Wait();
-            label1.Text += $"customer {id} waits; {NumSeats} seats left.\n";
+            WaitingRoom.Wait(); // Block NumSeats for this thread.
             if (NumSeats > 0)
             {
-                NumSeats--;
-                CustomerWaiting.Release();
+                NumSeats--; // Took a seat.
+                label1.Text += $"customer {id} took a seat; {NumSeats} seats left.\n";
                 WaitingRoom.Release();
+                CustomerWaiting.Release(); // Signal a customer is waiting.
+                label1.Text += $"customer {id} waiting...\n";
 
-                BarberReady.Wait();
-                label1.Text += $"barber finished cutting customer {id} .\n";
+                BarberReady.Wait(); // Wait for barber to be ready.
 
             }
             else
@@ -70,6 +71,7 @@ namespace BarberShop
                 WaitingRoom.Release();
                 label1.Text += $"customer {id} got no hair cut.\n";
             }
+
         }
     }
 }

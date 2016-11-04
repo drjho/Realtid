@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_01Threading", "_01Threadin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarberShop", "BarberShop\BarberShop.csproj", "{18DC1144-2D11-4D99-BE82-F3935D64AE1A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarSimulation", "CarSimulation\CarSimulation.csproj", "{55F5B927-D6E4-4FEA-81BE-29D3F8FBEAA1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{18DC1144-2D11-4D99-BE82-F3935D64AE1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18DC1144-2D11-4D99-BE82-F3935D64AE1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18DC1144-2D11-4D99-BE82-F3935D64AE1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55F5B927-D6E4-4FEA-81BE-29D3F8FBEAA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55F5B927-D6E4-4FEA-81BE-29D3F8FBEAA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55F5B927-D6E4-4FEA-81BE-29D3F8FBEAA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55F5B927-D6E4-4FEA-81BE-29D3F8FBEAA1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
