@@ -104,7 +104,11 @@ namespace CarSimulation
                 sb.Append('=', pos - 0);
                 sb.Append('|');
                 sb.Append('=', 10 - pos);
-                wiperStr = sb.ToString();
+                lock (lock3)
+                {
+                    wiperStr = sb.ToString();
+
+                }
                 pos += shift;
                 if (pos == 10)
                     shift = -1;
